@@ -15,6 +15,10 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 - CSS
 - JavaScript
 
+## Projects
+
+**Cambia Fondo**
+- Cambia el color de fondo la n cantidad de veces al hacer clik en un boton
   
 ## Authors
 

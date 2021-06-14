@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambia Color</title>
+
+    <style>
+        .salmon {
+            background-color: salmon;
+        }
+        
+        .tomato {
+            background-color: tomato;
+        }
+        
+        .gray {
+            background-color: #616161;
+        }
+        
+        .teal {
+            background-color: teal;
+        }
+        
+        .main {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btn {
+            outline: none;
+            cursor: pointer;
+            padding: 15px 35px;
+            border: none;
+            background-color: white;
+            font-weight: bold;
+            -webkit-box-shadow: 9px 9px 0px 2px #000000;
+            box-shadow: 9px 9px 0px 2px #000000;
+        }
+        
+        .btn:hover {
+            -webkit-box-shadow: 9px 9px 10px 2px #000000;
+            box-shadow: 9px 9px 10px 2px #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="main gray" id="main ">
+            <p>
+                <button class="btn" id="bg_change">Cambia</button>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        let colors = ["salmon", "tomato", "gray", "teal"]
+        let used_colors = []
+        document.getElementById("bg_change").addEventListener("click", () => {
+            let content = document.querySelector(".main")
+                /**
+                 * Cambia fondo con colores consecutivos, eliminamos el uso de aleatorio
+                 * se usan dos arreglos, uno con los colores a usar y los usados
+                 * @ colors = almacena los nombres de clase con los colores
+                 * @ user_colors = donde se almacenan los colores usados
+                 * 
+                 */
+            if (colors.length <= 0) {
+                colors = used_colors
+                used_colors = []
+
+            } else {
+                content.setAttribute("class", "main")
+                used_colors.push(colors[0])
+                content.classList.add(colors[0])
+                colors = colors.slice(1, colors.length)
+            }
+        })
+    </script>
+</body>
+
+</html>
