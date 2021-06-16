@@ -19,7 +19,10 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 **Cambia Fondo**
 - Cambia el color de fondo la n cantidad de veces al hacer clik en un boton
-  
+
+**Mensaje JS**
+- Muestra mensaje de input en etiqueta
+
 ## Authors
 
 - [@Emmanuelurbina](https://www.github.com/emmanuelurbina)
